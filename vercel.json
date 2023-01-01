@@ -1,7 +1,16 @@
 {
     "version": 2,
-
-    "name" : "todoList",
-    "builds" : [{"src" : "/app.js", "use": "@vercel/node"}],
-    "routes": [{"src":"/(.*)", "dest":"/"}]
+    "name": "todoList",
+    "builds": [
+        {
+            "src": "./app.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
 }
