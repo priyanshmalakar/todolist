@@ -12,7 +12,7 @@ app.use(express.static("public"))
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect(process.env.URL,{useNewUrlParser: true } ,() => {
+mongoose.connect("process.env.URL",{useNewUrlParser: true } ,() => {
     console.log("mongodb connected!")
 });
 
