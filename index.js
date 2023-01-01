@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
 const _ = require("lodash");
-require("dotenv").config();
+
 
 const app = express();
 
@@ -12,7 +14,7 @@ app.use(express.static("public"))
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect("process.env.URL",{useNewUrlParser: true } ,() => {
+mongoose.connect(process.env.URL ,{useNewUrlParser: true } ,() => {
     console.log("mongodb connected!")
 });
 
